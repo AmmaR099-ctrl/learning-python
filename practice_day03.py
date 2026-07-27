@@ -1,3 +1,5 @@
+gmail=" "
+password=" "
 def register():
     while True:
         name=input("Enter your name: ")
@@ -15,7 +17,7 @@ def register():
 
     while True:
         gmail=input("Enter your gmail: ")
-        gamil=gmail.lower().strip()
+        gmail=gmail.lower().strip()
         if "." in gmail and "@" in gmail:
             break
         else:
@@ -36,7 +38,7 @@ def register():
             continue
         has_alphabet=any(char.isalpha() for char in password)
         has_digit=any(ch.isdigit() for ch in password)
-        has_special= any (ch in "@#$%^&*<>:?~_-:;" for ch in password)
+        has_special= any (ch in "!@#$%^&*<>:?~_-:;" for ch in password)
         if has_alphabet and has_digit and has_special and iscorrect:
             break
         else:
@@ -49,7 +51,18 @@ def register():
         else:
             print("must match the password. try agian!")
     print("CONGRATULATION! you got registered")
+    c=int(input("press 1 to sign in!"))
+    if c==1:
+        sign_in()
 
+def sign_in():
+    user=input("Enter your gmail: ")
+    pas=input("Enter password: ")
+    if user==gmail and pas==password:
+        print("WELCOME! You logged in ")
+
+    
+print("register your self here! ")
 register()
 
 
