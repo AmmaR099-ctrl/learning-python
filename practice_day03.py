@@ -1,5 +1,3 @@
-gmail=" "
-password=" "
 def register():
     while True:
         name=input("Enter your name: ")
@@ -53,9 +51,10 @@ def register():
     print("CONGRATULATION! you got registered")
     c=int(input("press 1 to sign in!"))
     if c==1:
-        sign_in()
+        sign_in(gmail, password)
+    return gmail,password
 
-def sign_in():
+def sign_in(gmail,password):
     user=input("Enter your gmail: ")
     pas=input("Enter password: ")
     if user==gmail and pas==password:
@@ -63,6 +62,8 @@ def sign_in():
 
     
 print("register your self here! ")
-register()
+gmail,password=register()
+
+
 
 
