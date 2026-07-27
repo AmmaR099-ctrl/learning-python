@@ -32,14 +32,15 @@ def register():
         password=input("Enter password of atleast 8 characters: ")
         iscorrect=True
         if (len(password)<8):
-            iscorrect=False
+            print("password must contain atleast 8 characters. ")
+            continue
         has_alphabet=any(char.isalpha() for char in password)
         has_digit=any(ch.isdigit() for ch in password)
         has_special= any (ch in "@#$%^&*<>:?~_-:;" for ch in password)
         if has_alphabet and has_digit and has_special and iscorrect:
             break
         else:
-            print("your password must contain 8 characters and always have alphabet, digit and special character")
+            print("your password always have alphabet, digit and special character")
             print("Try agian!")
     while True:
         c_password=input("confirm your password: ")        
@@ -47,6 +48,7 @@ def register():
             break
         else:
             print("must match the password. try agian!")
+    print("CONGRATULATION! you got registered")
 
 register()
 
