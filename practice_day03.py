@@ -62,8 +62,6 @@ def sign_in(gmail,password):
 
     
 print("register your self here! ")
+gmail=" "
+password=" "
 gmail,password=register()
-
-
-
-
