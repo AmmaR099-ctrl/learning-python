@@ -1,0 +1,3 @@
+Hello! I'm Muhammad Ammar.
+I'm BS student at Air University.
+I started learning Python during my first summer break from university.
