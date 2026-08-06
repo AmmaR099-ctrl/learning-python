@@ -29,13 +29,12 @@ class member:
             i = input("Enter 'y' if you want to borrow book: ")
             if i == 'y':
                 result = member.check_book()
+
                 
-                # Check if check_book() actually returned a book (not None)
                 if result is not None:
                     code, name = result
                     members[Id][1].append([code, name])
-                    
-                    # FIX 1: Save updated borrowed list back to member.json!
+                        
                     with open("member.json", "w") as f:
                         json.dump(members, f, indent=4)
                     print("Book borrowed successfully!")
@@ -54,8 +53,8 @@ class member:
             return None
 
         print("available books: ", books[code][3])
+       
         
-        # FIX 3: Changed > 1 to >= 1 (or > 0)
         if books[code][3] >= 1:
             books[code][3] -= 1
             with open('books.json', 'w') as f:
