@@ -10,3 +10,4 @@ I'm Muhammad Ammar. I started learning python during my first summer break becau
 | 05  | payroll system | OOP, classmethod, inheritance | [day05](https://github.com/AmmaR099-ctrl/learning-python/blob/main/practice_day05.py) |
 | 06  | finding word from file | File handling practice | [day06](https://github.com/AmmaR099-ctrl/learning-python/tree/main/practice_day06) |
 | 07  | Library management system | File handling practice (JSON module) | [day07](https://github.com/AmmaR099-ctrl/learning-python/tree/main/practice_day07) |
+| 08  | Library management system | added more functions in library management system | [day08](https://github.com/AmmaR099-ctrl/learning-python/tree/main/practice_day07) |
