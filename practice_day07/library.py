@@ -7,11 +7,17 @@ class member:
         self.__borrow_books = []
 
     def add_members(self):
-        with open("member.json", "r") as f:
-            data = json.load(f)
-        data[self.__ID] = [self.__name, self.__borrow_books]
-        with open('member.json', 'w') as f:
-            json.dump(data, f, indent=4)
+        try:    
+            with open("member.json", "r") as f:
+                data = json.load(f)
+        except (FileNotFoundError,json.JSONDecodeError):
+            data={self.__ID:[self.__name,self.__borrow_books]}
+            
+        else:
+            data[self.__ID] = [self.__name, self.__borrow_books]
+        finally:
+            with open('member.json', 'w') as f:
+                json.dump(data, f, indent=4)
 
     @staticmethod
     def borrow_book():
@@ -29,8 +35,7 @@ class member:
             i = input("Enter 'y' if you want to borrow book: ")
             if i == 'y':
                 result = member.check_book()
-
-                
+                 
                 if result is not None:
                     code, name = result
                     members[Id][1].append([code, name])
@@ -62,7 +67,7 @@ class member:
             return code, books[code][0]
         else:
             print("Not available!")
-            # FIX 2: Returns None safely so unpack doesn't crash
+          
             return None
 
 member.borrow_book()
