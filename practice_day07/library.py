@@ -99,12 +99,16 @@ class member:
         else:
             if code not in books:
                 print("Incorrect code")
-      
+                return None
+        i=0
         for book in data[Id][1]:
             if book[0]==code:
                 data[Id][1].remove(book)
+                books[code][3]+=1
+                i+=1
                 break
-        books[code][3]+=1
+        if i==0:
+            print("No book is borrowed! ")
         with open("member.json","w") as f:
             json.dump(data,f,indent=4)
         with open("books.json","w") as f:
