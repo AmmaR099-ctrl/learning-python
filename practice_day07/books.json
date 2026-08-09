@@ -1,38 +1,50 @@
 {
-    "101": [
-        "study of earth",
-        "john",
-        5,
-        5
-    ],
-    "102": [
-        "fundamental of science",
-        "dawid",
-        3,
-        3
-    ],
-    "103": [
-        "basic skills",
-        "qasim",
-        6,
-        6
-    ],
-    "104": [
-        "dicipline",
-        "ali",
-        5,
-        5
-    ],
-    "105": [
-        "faith",
-        "umar",
-        4,
-        4
-    ],
-    "107": [
-        "unity",
-        "faisal",
-        9,
-        9
-    ]
+    "101": {
+        "name": "study of earth",
+        "author": "john",
+        "total_copies": 5,
+        "available_copies": 5
+    },
+    "102": {
+        "name": "fundamental of science",
+        "author": "dawid",
+        "total_copies": 3,
+        "available_copies": 3
+    },
+    "103": {
+        "name": "basic skills",
+        "author": "qasim",
+        "total_copies": 6,
+        "available_copies": 6
+    },
+    "104": {
+        "name": "dicipline",
+        "author": "ali",
+        "total_copies": 5,
+        "available_copies": 4
+    },
+    "105": {
+        "name": "faith",
+        "author": "umar",
+        "total_copies": 4,
+        "available_copies": 4
+    },
+    "107": {
+        "name": "unity",
+        "author": "faisal",
+        "total_copies": 9,
+        "available_copies": 9
+    },
+    "106": {
+        "name": "angel",
+        "author": "fazul ilahi",
+        "total_copies": 7,
+        "available_copies": 7
+    },
+    "110": {
+        "name": "python",
+        "author": "Ammar",
+        "total_copies": 3,
+        "available_copies": 3
+    }
 }

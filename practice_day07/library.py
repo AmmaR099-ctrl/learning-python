@@ -1,8 +1,33 @@
 import json
+class Library:
+    Lib_name="AIR UNIVERSITY LIBRARY"
+class Book(Library):
+    def __init__(self,code,name,author,total_copies,available_copies):
+        self.__code=code
+        self.__name=name
+        self.__author=author
+        self.__total_copies=total_copies
+        self.__available_copies=available_copies
+    def add_books(self):
+        try:
+            with open("books.json","r") as f:
+                data=json.load(f)
+        except(FileNotFoundError,json.JSONDecodeError):
+            data={self.__code:{"name":self.__name,"author":self.__author,"total_copies":self.__total_copies,"available_copies":self.__available_copies}}
+        else:
+            data[self.__code]={"name":self.__name,"author":self.__author,"total_copies":self.__total_copies,"available_copies":self.__available_copies}
+        finally:
+            with open("books.json","w") as f:
+                json.dump(data,f,indent=4)           
+            print("Added successfully! ")
+        while True:
+            i=input("Enter 'next' for main menu: ")     
+            if i=='next':
+                break
 
 class member:
     def __init__(self, Id, name):
-        self.__ID = str(Id)
+        self.__ID = Id
         self.__name = name
         self.__borrow_books = []
 
@@ -64,14 +89,14 @@ class member:
                 print("Book code not found!")
                 return None
 
-            print("available books: ", books[code][3])
+            print("available books: ", books[code]["available_copies"])
         
             
-            if books[code][3] >= 1:
-                books[code][3] -= 1
+            if books[code]["available_copies"] >= 1:
+                books[code]["available_copies"] -= 1
                 with open('books.json', 'w') as f:
                     json.dump(books, f, indent=4)
-                return code, books[code][0]
+                return code, books[code]["name"]
             else:
                 print("Not available!")
             
@@ -104,7 +129,7 @@ class member:
         for book in data[Id][1]:
             if book[0]==code:
                 data[Id][1].remove(book)
-                books[code][3]+=1
+                books[code]["available_copies"]+=1
                 i+=1
                 break
         if i==0:
@@ -116,14 +141,24 @@ class member:
             
 # member.borrow_book()
 while True:
-    c=int(input("---Main menu---\n1.borrow book\n2.return book\n3.main menu\n4.Exit\npress choice number: "))
+    c=int(input("---Main menu---\n1.borrow book\n2.return book\n3.Add book\n4.main menu\n5.Exit\npress choice number: "))
     if c==1:
         member.borrow_book()
     elif c==2:
         member.return_book()
     elif c==3:
-        continue
+        code=input("Enter code:")
+        name=input("Enter book name: ")
+        author=input("Enter author name: ")
+        total=int(input("Enter no. of total copies: "))
+        available=int(input("Enter no. of available copies: "))
+        book=Book(code,name,author,total,available)
+        book.add_books()
+        del book
+
     elif c==4:
+        continue
+    elif c==5: 
         break
     else:
         print("Incorrect choice! try again.")
