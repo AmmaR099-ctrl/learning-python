@@ -1,7 +1,7 @@
 import json
 class Library:
     Lib_name="AIR UNIVERSITY LIBRARY"
-class Book(Library):
+class Book():
     def __init__(self,code,name,author,total_copies,available_copies):
         self.__code=code
         self.__name=name
