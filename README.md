@@ -11,4 +11,4 @@ I'm Muhammad Ammar. I started learning python during my first summer break becau
 | 06  | finding word from file | File handling practice | [day06](https://github.com/AmmaR099-ctrl/learning-python/tree/main/practice_day06) |
 | 07  | Library management system | File handling practice (JSON module) | [day07](https://github.com/AmmaR099-ctrl/learning-python/tree/main/practice_day07) |
 | 08  | Library management system | added more functions in library management system | [day08](https://github.com/AmmaR099-ctrl/learning-python/tree/main/practice_day07) |
-| 09  | student marks array(numpy) | learn Numpy and practice these tasks | [day08](https://github.com/AmmaR099-ctrl/learning-python/tree/main/practice_day09) |
+| 09  | student marks array(numpy) | learn Numpy and practice these tasks | [day09](https://github.com/AmmaR099-ctrl/learning-python/tree/main/practice_day09) |
