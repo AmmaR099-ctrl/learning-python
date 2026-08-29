@@ -1,0 +1,12 @@
+{
+    "1": {
+        "date": "2026-08-17",
+        "category": "traveling",
+        "amount": "1500"
+    },
+    "2": {
+        "date": "2026-08-17",
+        "category": "food\\",
+        "amount": "300"
+    }
+}
