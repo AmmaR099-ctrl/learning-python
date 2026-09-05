@@ -14,3 +14,4 @@ I'm Muhammad Ammar. I started learning python during my first summer break becau
 | 09  | student marks array(numpy) | learn Numpy and practice these tasks | [day09](https://github.com/AmmaR099-ctrl/learning-python/tree/main/practice_day09) |
 | 10  | data sheet (numpy) | learn and practice numpy | [day10](https://github.com/AmmaR099-ctrl/learning-python/tree/main/practice_day10) |
 | 11  | expence tracker(numpy) | learn Numpy and create expence tracker using dateandtime library | [day11](https://github.com/AmmaR099-ctrl/learning-python/tree/main/practice_day11) |
+| 12  | web scraping | learn request library, beautifulsoup, requests_html | [day12](https://github.com/AmmaR099-ctrl/learning-python/tree/main/web-scraping) |
